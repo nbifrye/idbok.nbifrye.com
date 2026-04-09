@@ -54,6 +54,9 @@ jobs:
       - name: Check formatting
         run: npx oxfmt --check .
 
+      - name: Validate frontmatter
+        run: bash scripts/validate-frontmatter.sh
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5

@@ -5,5 +5,7 @@
   "reviewed_articles": 0,
   "knowledge_areas_covered": 9,
   "knowledge_areas_total": 9,
-  "work_runs": 0
+  "work_runs": 0,
+  "last_run": null,
+  "run_history": []
 }
