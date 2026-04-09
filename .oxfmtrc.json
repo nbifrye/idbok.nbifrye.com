@@ -4,5 +4,5 @@
   "tabWidth": 2,
   "useTabs": false,
   "endOfLine": "lf",
-  "ignorePatterns": ["public/**", "resources/**"]
+  "ignorePatterns": [".vitepress/dist/**", ".vitepress/cache/**"]
 }

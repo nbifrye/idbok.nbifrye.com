@@ -13,8 +13,9 @@
   },
   "permissions": {
     "allow": [
-      "Bash(hugo *)",
+      "Bash(npx vitepress *)",
       "Bash(npx oxfmt *)",
+      "Bash(npm run *)",
       "Bash(git add *)",
       "Bash(git commit *)",
       "Bash(git push *)",
