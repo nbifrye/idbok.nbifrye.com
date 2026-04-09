@@ -1,0 +1,15 @@
+:root {
+  --vp-font-family-base:
+    "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic",
+    "Noto Sans JP", "Yu Gothic", sans-serif;
+}
+
+.vp-doc {
+  line-height: 1.8;
+}
+
+.ai-disclaimer {
+  margin-top: 2rem;
+  font-size: 0.85em;
+  color: var(--vp-c-text-3);
+}
