@@ -1,0 +1,221 @@
+{
+  "version": 1,
+  "last_updated": "2026-04-09",
+  "items": [
+    {
+      "id": "ka-authentication",
+      "knowledge_area": "authentication",
+      "title": "認証プロトコル 知識領域の概要",
+      "slug": "docs/authentication/_index",
+      "priority": 1,
+      "status": "done",
+      "dependencies": [],
+      "created": "2026-04-09"
+    },
+    {
+      "id": "ka-passwordless",
+      "knowledge_area": "passwordless",
+      "title": "パスワードレス認証 知識領域の概要",
+      "slug": "docs/passwordless/_index",
+      "priority": 1,
+      "status": "done",
+      "dependencies": [],
+      "created": "2026-04-09"
+    },
+    {
+      "id": "ka-decentralized-identity",
+      "knowledge_area": "decentralized-identity",
+      "title": "分散型アイデンティティ 知識領域の概要",
+      "slug": "docs/decentralized-identity/_index",
+      "priority": 1,
+      "status": "done",
+      "dependencies": [],
+      "created": "2026-04-09"
+    },
+    {
+      "id": "ka-federation",
+      "knowledge_area": "federation",
+      "title": "アイデンティティ連携 知識領域の概要",
+      "slug": "docs/federation/_index",
+      "priority": 1,
+      "status": "done",
+      "dependencies": [],
+      "created": "2026-04-09"
+    },
+    {
+      "id": "ka-identity-governance",
+      "knowledge_area": "identity-governance",
+      "title": "アイデンティティガバナンス 知識領域の概要",
+      "slug": "docs/identity-governance/_index",
+      "priority": 1,
+      "status": "done",
+      "dependencies": [],
+      "created": "2026-04-09"
+    },
+    {
+      "id": "ka-privacy",
+      "knowledge_area": "privacy",
+      "title": "プライバシーと同意 知識領域の概要",
+      "slug": "docs/privacy/_index",
+      "priority": 1,
+      "status": "done",
+      "dependencies": [],
+      "created": "2026-04-09"
+    },
+    {
+      "id": "ka-zero-trust",
+      "knowledge_area": "zero-trust",
+      "title": "ゼロトラストアーキテクチャ 知識領域の概要",
+      "slug": "docs/zero-trust/_index",
+      "priority": 1,
+      "status": "done",
+      "dependencies": [],
+      "created": "2026-04-09"
+    },
+    {
+      "id": "ka-cryptographic-foundations",
+      "knowledge_area": "cryptographic-foundations",
+      "title": "暗号基盤 知識領域の概要",
+      "slug": "docs/cryptographic-foundations/_index",
+      "priority": 1,
+      "status": "done",
+      "dependencies": [],
+      "created": "2026-04-09"
+    },
+    {
+      "id": "ka-standards-bodies",
+      "knowledge_area": "standards-bodies",
+      "title": "標準化団体と仕様 知識領域の概要",
+      "slug": "docs/standards-bodies/_index",
+      "priority": 1,
+      "status": "done",
+      "dependencies": [],
+      "created": "2026-04-09"
+    },
+    {
+      "id": "topic-oauth2-overview",
+      "knowledge_area": "authentication",
+      "topic": "oauth2",
+      "title": "OAuth 2.0 トピック概要",
+      "slug": "docs/authentication/oauth2/_index",
+      "priority": 2,
+      "status": "pending",
+      "dependencies": ["ka-authentication"],
+      "created": "2026-04-09"
+    },
+    {
+      "id": "topic-oidc-overview",
+      "knowledge_area": "authentication",
+      "topic": "oidc",
+      "title": "OpenID Connect トピック概要",
+      "slug": "docs/authentication/oidc/_index",
+      "priority": 2,
+      "status": "pending",
+      "dependencies": ["ka-authentication"],
+      "created": "2026-04-09"
+    },
+    {
+      "id": "topic-saml-overview",
+      "knowledge_area": "authentication",
+      "topic": "saml",
+      "title": "SAML 2.0 トピック概要",
+      "slug": "docs/authentication/saml/_index",
+      "priority": 2,
+      "status": "pending",
+      "dependencies": ["ka-authentication"],
+      "created": "2026-04-09"
+    },
+    {
+      "id": "topic-fido2-webauthn-overview",
+      "knowledge_area": "passwordless",
+      "topic": "fido2-webauthn",
+      "title": "FIDO2 / WebAuthn トピック概要",
+      "slug": "docs/passwordless/fido2-webauthn/_index",
+      "priority": 2,
+      "status": "pending",
+      "dependencies": ["ka-passwordless"],
+      "created": "2026-04-09"
+    },
+    {
+      "id": "topic-passkeys-overview",
+      "knowledge_area": "passwordless",
+      "topic": "passkeys",
+      "title": "パスキー トピック概要",
+      "slug": "docs/passwordless/passkeys/_index",
+      "priority": 2,
+      "status": "pending",
+      "dependencies": ["ka-passwordless"],
+      "created": "2026-04-09"
+    },
+    {
+      "id": "topic-did-overview",
+      "knowledge_area": "decentralized-identity",
+      "topic": "did",
+      "title": "分散型識別子 DID トピック概要",
+      "slug": "docs/decentralized-identity/did/_index",
+      "priority": 2,
+      "status": "pending",
+      "dependencies": ["ka-decentralized-identity"],
+      "created": "2026-04-09"
+    },
+    {
+      "id": "topic-vc-overview",
+      "knowledge_area": "decentralized-identity",
+      "topic": "verifiable-credentials",
+      "title": "検証可能な資格情報 トピック概要",
+      "slug": "docs/decentralized-identity/verifiable-credentials/_index",
+      "priority": 2,
+      "status": "pending",
+      "dependencies": ["ka-decentralized-identity"],
+      "created": "2026-04-09"
+    },
+    {
+      "id": "article-oauth2-authcode",
+      "knowledge_area": "authentication",
+      "topic": "oauth2",
+      "title": "OAuth 2.0 認可コードフロー",
+      "slug": "docs/authentication/oauth2/authorization-code-flow",
+      "priority": 3,
+      "complexity": "intermediate",
+      "status": "pending",
+      "dependencies": ["topic-oauth2-overview"],
+      "created": "2026-04-09"
+    },
+    {
+      "id": "article-oauth2-pkce",
+      "knowledge_area": "authentication",
+      "topic": "oauth2",
+      "title": "PKCE（Proof Key for Code Exchange）",
+      "slug": "docs/authentication/oauth2/pkce",
+      "priority": 3,
+      "complexity": "intermediate",
+      "status": "pending",
+      "dependencies": ["article-oauth2-authcode"],
+      "created": "2026-04-09"
+    },
+    {
+      "id": "article-oidc-id-token",
+      "knowledge_area": "authentication",
+      "topic": "oidc",
+      "title": "OpenID Connect ID トークン",
+      "slug": "docs/authentication/oidc/id-token",
+      "priority": 3,
+      "complexity": "intermediate",
+      "status": "pending",
+      "dependencies": ["topic-oidc-overview"],
+      "created": "2026-04-09"
+    },
+    {
+      "id": "article-webauthn-registration",
+      "knowledge_area": "passwordless",
+      "topic": "fido2-webauthn",
+      "title": "WebAuthn 登録セレモニー",
+      "slug": "docs/passwordless/fido2-webauthn/registration-ceremony",
+      "priority": 3,
+      "complexity": "advanced",
+      "status": "pending",
+      "dependencies": ["topic-fido2-webauthn-overview"],
+      "created": "2026-04-09"
+    }
+  ]
+}

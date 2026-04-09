@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "scripts": {
+    "fmt": "oxfmt --write .",
+    "fmt:check": "oxfmt --check ."
+  },
+  "devDependencies": {
+    "oxfmt": "latest"
+  }
+}
