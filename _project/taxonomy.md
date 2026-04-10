@@ -1,327 +1,147 @@
-# IdBoK トピック分類体系
+# IdBoK コンテンツ分類体系
 
-本ドキュメントはデジタルアイデンティティ Body of Knowledge が網羅すべき知識領域とトピックの全体像を定義する。
+本ドキュメントはデジタルアイデンティティ Body of Knowledge のコンテンツ体系と、各セクションでカバーするトピックの全体像を定義する。
 `/work` スキルはこの分類体系を参照してトピック選定を行う。
 
-## 知識領域 1: 認証プロトコル
+## コンテンツ体系
 
-ディレクトリ: `content/docs/authentication/`
+IdBoK のコンテンツは以下の3セクションで構成される。
 
-### OAuth 2.0 (`oauth2/`)
+### BoK (`docs/bok/`)
 
-- 概要と設計思想
-- 認可コードフロー（Authorization Code Flow）
-- PKCE（Proof Key for Code Exchange）
-- クライアントクレデンシャルフロー
-- デバイス認可フロー
-- トークンイントロスペクション
-- トークン失効（Token Revocation）
-- DPoP（Demonstration of Proof-of-Possession）
-- リソースインジケーター
+初学者がゼロからデジタルアイデンティティを学ぶための体系的な学習資料。
+新卒1年目レベルの読者を想定し、第1章から順に読み進める前提で執筆する。
+各章は前の章の内容を前提とし、実践的な認証プロトコルから始めて、技術的な深掘りと先端トピックへと段階的に進む。
 
-### OpenID Connect (`oidc/`)
+### Spec (`docs/spec/`)
 
-- 概要と OAuth 2.0 との関係
-- ID トークン
-- ディスカバリー（Discovery）
-- 動的クライアント登録
-- クレームとスコープ
-- UserInfo エンドポイント
-- ログアウト（RP-Initiated, Back-Channel, Front-Channel）
-- CIBA（Client-Initiated Backchannel Authentication）
+RFC、W3C 勧告、FIDO Alliance 仕様、OpenID Foundation 仕様などの具体的な技術仕様を解説するセクション。
+一仕様につき1記事を原則とし、仕様そのものの構造・用語・実装上の注意点を一次資料に沿って整理する。
 
-### SAML 2.0 (`saml/`)
+### Article (`docs/article/`)
 
-- 概要とアサーション
-- バインディングとプロファイル
-- メタデータ
-- シングルサインオン
-- シングルログアウト
-- SAML と OIDC の比較
+BoK や Spec に収まらない個別トピックを扱うセクション。
+業界の時事的な話題、複数仕様にまたがる横断的なトピック、実装上のベストプラクティス、セキュリティインシデントの解説などを対象とする。
 
-### Kerberos (`kerberos/`)
+## BoK の章構成
 
-- チケットと KDC
-- TGT とサービスチケット
-- 委任（Delegation）
+BoK は10章構成とする。章番号はそのまま学習順序を示す。
 
-### HTTP 認証 (`http-auth/`)
+### 第1章 デジタルアイデンティティ入門 (`docs/bok/01-introduction/`)
 
-- Basic 認証と Digest 認証
-- Bearer トークン
-- 相互 TLS（mTLS）
+- デジタルアイデンティティとは
+- 識別・認証・認可の違い
+- アイデンティティに関わる登場人物（ユーザー、RP、IdP、認可サーバー）
+- なぜデジタルアイデンティティが重要なのか
 
-## 知識領域 2: パスワードレス認証
+### 第2章 認証プロトコル (`docs/bok/02-authentication/`)
 
-ディレクトリ: `content/docs/passwordless/`
+- OAuth 2.0
+- OpenID Connect
+- SAML 2.0
+- Kerberos
+- HTTP 認証（Basic、Digest、Bearer、mTLS）
 
-### FIDO2 / WebAuthn (`fido2-webauthn/`)
+### 第3章 パスワードレス認証 (`docs/bok/03-passwordless/`)
 
-- 概要とアーキテクチャ
-- 登録セレモニー
-- 認証セレモニー
-- アテステーション
-- レジデントキー（Discoverable Credentials）
+- FIDO2 / WebAuthn
+- パスキー
+- FIDO UAF / U2F
+- マジックリンクと OTP
+- 生体認証
 
-### パスキー (`passkeys/`)
+### 第4章 アイデンティティ連携 (`docs/bok/04-federation/`)
 
-- プラットフォーム認証器
-- クロスデバイス認証
-- 同期パスキー
-- ハイブリッドトランスポート
+- フェデレーションプロトコル（SAML、OIDC、SCIM）
+- トラストフレームワーク（eIDAS 2.0、NIST SP 800-63）
+- クロスドメインアイデンティティ
+- エンタープライズフェデレーション
 
-### FIDO UAF / U2F (`fido-legacy/`)
+### 第5章 アイデンティティガバナンス (`docs/bok/05-identity-governance/`)
 
-- レガシープロトコルの概要
-- FIDO2 への移行
+- アイデンティティライフサイクル
+- アクセス管理（RBAC / ABAC / ReBAC）
+- 特権アクセス管理（PAM）
+- 監査とコンプライアンス
+- ディレクトリサービス
 
-### マジックリンクと OTP (`magic-link-otp/`)
+### 第6章 プライバシーと同意 (`docs/bok/06-privacy/`)
 
-- メールベース認証
-- SMS ベース認証
-- TOTP と HOTP
+- プライバシー強化技術（PETs）
+- 同意管理
+- データ最小化
+- プライバシー規制
+- プライバシー・バイ・デザイン
 
-### 生体認証 (`biometrics/`)
+### 第7章 暗号基盤 (`docs/bok/07-cryptographic-foundations/`)
 
-- 指紋・顔・虹彩認証
-- 行動バイオメトリクス
-- ライブネス検出
+- PKI
+- JSON Web Token（JWT / JOSE）
+- 鍵管理
+- 耐量子暗号
+- デジタル署名
 
-## 知識領域 3: 分散型アイデンティティ
+### 第8章 ゼロトラストアーキテクチャ (`docs/bok/08-zero-trust/`)
 
-ディレクトリ: `content/docs/decentralized-identity/`
+- ゼロトラストの原則
+- アイデンティティ中心セキュリティ
+- ネットワークアイデンティティ
+- デバイスアイデンティティ
+- API セキュリティ
 
-### 分散型識別子 DID (`did/`)
+### 第9章 分散型アイデンティティ (`docs/bok/09-decentralized-identity/`)
 
-- DID メソッドと DID ドキュメント
-- DID Resolution
-- did:web, did:key, did:ion
+- 分散型識別子（DID）
+- 検証可能な資格情報（Verifiable Credentials）
+- アイデンティティウォレット
+- 自己主権型アイデンティティ（SSI）
+- ブロックチェーンとアイデンティティ
 
-### 検証可能な資格情報 (`verifiable-credentials/`)
+### 第10章 標準化団体と仕様 (`docs/bok/10-standards-bodies/`)
 
-- W3C データモデル
-- 発行と提示
-- 選択的開示
-- JSON-LD, JWT-VC, SD-JWT-VC
+- IETF
+- W3C
+- FIDO Alliance
+- OpenID Foundation
+- ISO/IEC
+- NIST
 
-### アイデンティティウォレット (`identity-wallets/`)
+## Spec で扱う主な仕様群
 
-- ホルダーアーキテクチャ
-- 資格情報の保管
-- OID4VCI, OID4VP
+仕様解説で優先的に扱う仕様を列挙する。slug は `docs/spec/<slug>/` とする。
 
-### 自己主権型アイデンティティ (`ssi/`)
+### IETF RFC
 
-- 原則とコンセプト
-- トラストフレームワーク
-- ガバナンス
+- OAuth 2.0 関連（RFC 6749、RFC 6750、RFC 7636 PKCE、RFC 8628 Device Authorization、RFC 9449 DPoP など）
+- JOSE 関連（RFC 7515 JWS、RFC 7516 JWE、RFC 7517 JWK、RFC 7518 JWA、RFC 7519 JWT）
+- SCIM 関連（RFC 7642、RFC 7643、RFC 7644）
 
-### ブロックチェーンとアイデンティティ (`blockchain-identity/`)
-
-- Ethereum ベースのアプローチ
-- Hyperledger Indy / Aries
-- ION
-
-## 知識領域 4: アイデンティティ連携
-
-ディレクトリ: `content/docs/federation/`
-
-### フェデレーションプロトコル (`protocols/`)
-
-- SAML フェデレーション
-- OIDC フェデレーション
-- SCIM（System for Cross-domain Identity Management）
-
-### トラストフレームワーク (`trust-frameworks/`)
-
-- eIDAS 2.0
-- NIST SP 800-63
-- Pan-Canadian Trust Framework
-
-### クロスドメインアイデンティティ (`cross-domain/`)
-
-- アイデンティティリンキング
-- アカウントフェデレーション
-- ジャストインタイムプロビジョニング
-
-### エンタープライズフェデレーション (`enterprise/`)
-
-- IdP プロキシ
-- マルチテナント
-- B2B アイデンティティ
-
-## 知識領域 5: アイデンティティガバナンス
-
-ディレクトリ: `content/docs/identity-governance/`
-
-### アイデンティティライフサイクル (`lifecycle/`)
-
-- プロビジョニングとデプロビジョニング
-- Joiner-Mover-Leaver プロセス
-
-### アクセス管理 (`access-management/`)
-
-- RBAC（ロールベースアクセス制御）
-- ABAC（属性ベースアクセス制御）
-- ReBAC（関係ベースアクセス制御）
-- ポリシーエンジン（OPA）
-
-### 特権アクセス管理 (`pam/`)
-
-- PAM の概要
-- ジャストインタイムアクセス
-- シークレット管理（Vaulting）
-
-### 監査とコンプライアンス (`audit-compliance/`)
-
-- SOX, GDPR 対応
-- アクセスレビュー
-- 職務分離（SoD）
-
-### ディレクトリサービス (`directory-services/`)
-
-- LDAP
-- Active Directory
-- SCIM
-- クラウドディレクトリ
-
-## 知識領域 6: プライバシーと同意
-
-ディレクトリ: `content/docs/privacy/`
-
-### プライバシー強化技術 (`pets/`)
-
-- ゼロ知識証明
-- 準同型暗号
-- 差分プライバシー
-
-### 同意管理 (`consent-management/`)
-
-- 同意レシート
-- Kantara Initiative
-- UMA 2.0
-
-### データ最小化 (`data-minimization/`)
-
-- 選択的開示
-- 最小限開示トークン
-
-### プライバシー規制 (`regulations/`)
-
-- GDPR
-- CCPA
-- ePrivacy
-- 日本の個人情報保護法
-
-### プライバシー・バイ・デザイン (`privacy-by-design/`)
-
-- アイデンティティアーキテクチャにおけるプライバシー
-- 仮名化と匿名化
-
-## 知識領域 7: ゼロトラストアーキテクチャ
-
-ディレクトリ: `content/docs/zero-trust/`
-
-### ゼロトラストの原則 (`principles/`)
-
-- Never Trust, Always Verify
-- 最小権限の原則
-
-### アイデンティティ中心セキュリティ (`identity-centric/`)
-
-- 継続的認証
-- リスクベースアクセス
-
-### ネットワークアイデンティティ (`network-identity/`)
-
-- マイクロセグメンテーション
-- ZTNA（Zero Trust Network Access）
-- SDP（Software-Defined Perimeter）
-
-### デバイスアイデンティティ (`device-identity/`)
-
-- デバイスアテステーション
-- 証明書ベースの認証
-- TPM（Trusted Platform Module）
-
-### API セキュリティ (`api-security/`)
-
-- API ゲートウェイ
-- API 向け OAuth
-- トークンバインディング
-
-## 知識領域 8: 暗号基盤
-
-ディレクトリ: `content/docs/cryptographic-foundations/`
-
-### PKI (`pki/`)
-
-- 証明書と認証局
-- 証明書チェーン
-- 失効（OCSP, CRL）
-
-### JSON Web Token (`jwt/`)
-
-- JWT, JWS, JWE
-- JWK, JWA
-
-### 鍵管理 (`key-management/`)
-
-- 鍵のライフサイクル
-- HSM（Hardware Security Module）
-- KMS（Key Management Service）
-- 鍵ラッピング
-
-### 耐量子暗号 (`post-quantum/`)
-
-- NIST PQC 標準
-- 移行計画
-
-### デジタル署名 (`digital-signatures/`)
-
-- RSA, ECDSA, EdDSA
-- 閾値署名
-
-## 知識領域 9: 標準化団体と仕様
-
-ディレクトリ: `content/docs/standards-bodies/`
-
-### IETF (`ietf/`)
-
-- OAuth 関連 RFC
-- JOSE 関連 RFC
-- SCIM 関連 RFC
-- HTTP 認証関連 RFC
-
-### W3C (`w3c/`)
+### W3C 勧告
 
 - WebAuthn
-- Verifiable Credentials
-- DID
-- Web Payments
+- Verifiable Credentials Data Model
+- Decentralized Identifiers (DID)
 
-### FIDO Alliance (`fido-alliance/`)
+### FIDO Alliance
 
+- CTAP2
 - FIDO2
-- CTAP
-- パスキー仕様
-- デジタルクレデンシャル
 
-### OpenID Foundation (`openid-foundation/`)
+### OpenID Foundation
 
-- OpenID Connect
-- OIDF（OpenID Federation）
-- OID4VC
-- SIDI（Shared Identity for Decentralized Identity）
+- OpenID Connect Core 1.0
+- OpenID for Verifiable Credential Issuance (OID4VCI)
+- OpenID for Verifiable Presentations (OID4VP)
 
-### ISO/IEC 標準 (`iso/`)
+### ISO / NIST
 
-- ISO 18013-5 mDL
-- ISO 27001
-- ISO 29100
+- ISO/IEC 18013-5（mDL）
+- NIST SP 800-63（Digital Identity Guidelines）
+- NIST SP 800-207（Zero Trust Architecture）
 
-### NIST (`nist/`)
+## Article で扱うトピックの例
 
-- SP 800-63（Digital Identity Guidelines）
-- SP 800-207（Zero Trust Architecture）
-- Cybersecurity Framework
+- 業界の時事的な話題（パスキー採用事例、新規仕様の発表など）
+- 複数仕様を比較する横断的な解説
+- 実装上のベストプラクティス
+- セキュリティインシデントの解説

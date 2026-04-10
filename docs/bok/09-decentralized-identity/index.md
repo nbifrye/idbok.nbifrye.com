@@ -1,11 +1,12 @@
 ---
 title: 分散型アイデンティティ
 description: DID、Verifiable Credentials、自己主権型アイデンティティなど、中央集権に依存しないアイデンティティ技術
-knowledge_area: true
+content_type: bok
+chapter: 9
 ai_generated: true
 ---
 
-# 分散型アイデンティティ
+# 第9章: 分散型アイデンティティ
 
 分散型アイデンティティは、個人が自身のデジタルアイデンティティを所有・管理できるようにする技術体系です。
 中央集権的なアイデンティティプロバイダーに依存せず、ユーザー自身がデータの主権を持つことを目指します。

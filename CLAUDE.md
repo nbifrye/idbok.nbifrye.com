@@ -13,16 +13,25 @@ VitePress で構築し、GitHub Pages でホスト。全コンテンツは日本
 - フォーマット: `npx oxfmt --write .`
 - フォーマットチェック: `npx oxfmt --check .`
 
+## コンテンツ体系
+
+全コンテンツは `docs/` 配下の3セクションに分類する。
+
+- **BoK** (`docs/bok/`): 初学者がゼロからデジタルアイデンティティを学ぶための体系的な学習資料。新卒1年目レベルの読者を想定し、第1章から順に読むことを前提に執筆する。ディレクトリは `NN-slug/` 形式で章番号を付ける
+- **Spec** (`docs/spec/`): RFC、W3C 勧告、FIDO Alliance 仕様など、個別の技術仕様を一仕様1記事で解説する
+- **Article** (`docs/article/`): BoK や Spec に収まらない個別トピック、業界の時事的な話題、実装のヒントなどを扱う
+
 ## コンテンツガイドライン
 
-- 全コンテンツは `docs/` に配置し、知識領域ごとにディレクトリを分ける
 - 全ディレクトリに `index.md` を必ず作成する
 - 日本語で執筆し、技術用語は初出時に英語を併記する（例: 認可コードフロー（Authorization Code Flow））
 - 対象読者: 開発者、アーキテクト、セキュリティエンジニア
+- BoK は前章までで説明した概念を前提に書き、難易度を段階的に上げる
 - RFC・W3C仕様・FIDO仕様などの一次資料を必ず引用する
 - 実用的なコード例（プロトコルフロー、JWT例など）を含める
 - 関連記事には通常の Markdown リンクを使用: `[テキスト](./path.md)`
-- フロントマターに `ai_generated: true` を設定する
+- フロントマターに `ai_generated: true` と `content_type`（`bok` / `spec` / `article`）を必ず設定する
+- BoK の章ページには `chapter: N` を設定する
 - 既存記事を改善した場合は `review_count` をインクリメントする
 
 ## フォーマットルール
@@ -49,6 +58,7 @@ VitePress で構築し、GitHub Pages でホスト。全コンテンツは日本
 
 ## 参照ドキュメント
 
-- トピック分類体系: `_project/taxonomy.md`
+- コンテンツ分類体系: `_project/taxonomy.md`
+- BoK 章テンプレート: `_project/templates/bok-chapter.md`
+- 仕様解説テンプレート: `_project/templates/spec.md`
 - 記事テンプレート: `_project/templates/article.md`
-- セクションテンプレート: `_project/templates/section.md`

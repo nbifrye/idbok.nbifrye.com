@@ -1,11 +1,12 @@
 ---
 title: パスワードレス認証
 description: FIDO2/WebAuthn、パスキー、生体認証など、パスワードに依存しない認証技術
-knowledge_area: true
+content_type: bok
+chapter: 3
 ai_generated: true
 ---
 
-# パスワードレス認証
+# 第3章: パスワードレス認証
 
 パスワードレス認証は、従来のパスワードに代わる、より安全で使いやすい認証方法を提供します。
 フィッシング耐性、ユーザー体験の向上、認証情報の漏洩リスクの低減を実現します。

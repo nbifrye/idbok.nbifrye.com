@@ -1,11 +1,12 @@
 ---
 title: 暗号基盤
 description: PKI、JWT/JOSE、鍵管理、耐量子暗号、デジタル署名
-knowledge_area: true
+content_type: bok
+chapter: 7
 ai_generated: true
 ---
 
-# 暗号基盤
+# 第7章: 暗号基盤
 
 暗号基盤は、デジタルアイデンティティの信頼性と安全性を支える暗号技術の知識領域です。
 証明書管理、トークン形式、鍵管理、署名アルゴリズムなど、アイデンティティ技術の根幹をなします。

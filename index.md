@@ -4,40 +4,22 @@ title: デジタルアイデンティティ Body of Knowledge
 hero:
   name: IdBoK
   text: デジタルアイデンティティ Body of Knowledge
-  tagline: 認証プロトコル、パスワードレス認証、分散型アイデンティティなど、現代のデジタルアイデンティティを構成する9つの知識領域を体系的にカバーする包括的な知識体系
+  tagline: 初学者向けの体系的な学習資料、個別仕様の解説、そして個別トピックの記事を通じて、デジタルアイデンティティの知識体系を提供するオープンなリファレンスサイト
   actions:
     - theme: brand
-      text: 知識領域を見る
-      link: /docs/
+      text: BoK を読む
+      link: /docs/bok/
     - theme: alt
       text: 本サイトについて
       link: /about/
 features:
-  - title: 認証プロトコル
-    details: OAuth 2.0、OpenID Connect、SAML などの認証・認可プロトコル
-    link: /docs/authentication/
-  - title: パスワードレス認証
-    details: FIDO2/WebAuthn、パスキー、生体認証
-    link: /docs/passwordless/
-  - title: 暗号基盤
-    details: PKI、JWT、鍵管理、耐量子暗号
-    link: /docs/cryptographic-foundations/
-  - title: アイデンティティ連携
-    details: フェデレーション、トラストフレームワーク
-    link: /docs/federation/
-  - title: ゼロトラストアーキテクチャ
-    details: ゼロトラスト原則、アイデンティティ中心セキュリティ
-    link: /docs/zero-trust/
-  - title: アイデンティティガバナンス
-    details: ライフサイクル管理、アクセス制御、特権アクセス管理
-    link: /docs/identity-governance/
-  - title: 分散型アイデンティティ
-    details: DID、Verifiable Credentials、自己主権型アイデンティティ
-    link: /docs/decentralized-identity/
-  - title: プライバシーと同意
-    details: プライバシー強化技術、同意管理、規制
-    link: /docs/privacy/
-  - title: 標準化団体と仕様
-    details: IETF、W3C、FIDO Alliance、OpenID Foundation、NIST
-    link: /docs/standards-bodies/
+  - title: Body of Knowledge
+    details: ゼロから順番に読み進めるための10章構成の学習資料。新卒1年目レベルの初学者を想定し、実践的なトピックから技術的な深掘りへと段階的に進む
+    link: /docs/bok/
+  - title: 仕様解説
+    details: OAuth 2.0、WebAuthn、DID などの個別仕様を、一仕様につき1記事で解説。RFC や W3C 勧告などの一次資料に沿った内容
+    link: /docs/spec/
+  - title: 記事
+    details: BoK や仕様解説に収まらない個別トピック、業界の時事的な話題、実装のヒントなどを扱うセクション
+    link: /docs/article/
 ---

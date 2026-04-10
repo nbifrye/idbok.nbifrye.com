@@ -1,11 +1,12 @@
 ---
 title: 認証プロトコル
 description: OAuth 2.0、OpenID Connect、SAML など、デジタルアイデンティティの検証に使われるプロトコル群
-knowledge_area: true
+content_type: bok
+chapter: 2
 ai_generated: true
 ---
 
-# 認証プロトコル
+# 第2章: 認証プロトコル
 
 認証プロトコルは、ユーザーやシステムのデジタルアイデンティティを検証するための標準化された手順を定義します。
 現代のWebアプリケーションやAPIにおいて、安全な認証と認可を実現するための基盤技術です。

@@ -1,11 +1,12 @@
 ---
 title: 標準化団体と仕様
 description: IETF、W3C、FIDO Alliance、OpenID Foundation、NIST などの標準化団体とその仕様
-knowledge_area: true
+content_type: bok
+chapter: 10
 ai_generated: true
 ---
 
-# 標準化団体と仕様
+# 第10章: 標準化団体と仕様
 
 デジタルアイデンティティの技術は、複数の標準化団体によって策定された仕様に基づいています。
 各団体の役割、主要な仕様、そして仕様間の関係を理解することが、アイデンティティ技術の全体像を把握する鍵です。

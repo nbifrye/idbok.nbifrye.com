@@ -25,35 +25,72 @@ export default defineConfig({
 
   themeConfig: {
     nav: [
-      { text: "知識領域", link: "/docs/" },
+      { text: "BoK", link: "/docs/bok/" },
+      { text: "仕様解説", link: "/docs/spec/" },
+      { text: "記事", link: "/docs/article/" },
       { text: "用語集", link: "/glossary/" },
       { text: "本サイトについて", link: "/about/" },
     ],
 
     sidebar: {
-      "/docs/": [
+      "/docs/bok/": [
         {
-          text: "知識領域",
+          text: "Body of Knowledge",
           items: [
-            { text: "認証プロトコル", link: "/docs/authentication/" },
-            { text: "パスワードレス認証", link: "/docs/passwordless/" },
+            { text: "BoK トップ", link: "/docs/bok/" },
             {
-              text: "分散型アイデンティティ",
-              link: "/docs/decentralized-identity/",
+              text: "第1章 デジタルアイデンティティ入門",
+              link: "/docs/bok/01-introduction/",
             },
-            { text: "アイデンティティ連携", link: "/docs/federation/" },
             {
-              text: "アイデンティティガバナンス",
-              link: "/docs/identity-governance/",
+              text: "第2章 認証プロトコル",
+              link: "/docs/bok/02-authentication/",
             },
-            { text: "プライバシーと同意", link: "/docs/privacy/" },
             {
-              text: "ゼロトラストアーキテクチャ",
-              link: "/docs/zero-trust/",
+              text: "第3章 パスワードレス認証",
+              link: "/docs/bok/03-passwordless/",
             },
-            { text: "暗号基盤", link: "/docs/cryptographic-foundations/" },
-            { text: "標準化団体と仕様", link: "/docs/standards-bodies/" },
+            {
+              text: "第4章 アイデンティティ連携",
+              link: "/docs/bok/04-federation/",
+            },
+            {
+              text: "第5章 アイデンティティガバナンス",
+              link: "/docs/bok/05-identity-governance/",
+            },
+            {
+              text: "第6章 プライバシーと同意",
+              link: "/docs/bok/06-privacy/",
+            },
+            {
+              text: "第7章 暗号基盤",
+              link: "/docs/bok/07-cryptographic-foundations/",
+            },
+            {
+              text: "第8章 ゼロトラストアーキテクチャ",
+              link: "/docs/bok/08-zero-trust/",
+            },
+            {
+              text: "第9章 分散型アイデンティティ",
+              link: "/docs/bok/09-decentralized-identity/",
+            },
+            {
+              text: "第10章 標準化団体と仕様",
+              link: "/docs/bok/10-standards-bodies/",
+            },
           ],
+        },
+      ],
+      "/docs/spec/": [
+        {
+          text: "仕様解説",
+          items: [{ text: "仕様解説トップ", link: "/docs/spec/" }],
+        },
+      ],
+      "/docs/article/": [
+        {
+          text: "記事",
+          items: [{ text: "記事トップ", link: "/docs/article/" }],
         },
       ],
     },
